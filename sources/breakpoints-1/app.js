@@ -26,6 +26,7 @@ function inputsAreEmpty() {
 }
 
 function onClick() {
+    debugger;
     if (inputsAreEmpty()) {
         label.textContent = 'Error: one or both inputs are empty.';
         throw new Error('Error: one or both inputs are empty.');
