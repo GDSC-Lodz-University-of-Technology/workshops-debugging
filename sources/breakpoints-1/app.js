@@ -4,10 +4,12 @@ const label = document.querySelector('p');
 const button = document.querySelector('button');
 
 function getNumber1() {
+    // return Number(input1.value);
     return input1.value;
 }
 
 function getNumber2() {
+    // return Number(input2.value);
     return input2.value;
 }
 
@@ -26,7 +28,7 @@ function inputsAreEmpty() {
 function onClick() {
     if (inputsAreEmpty()) {
         label.textContent = 'Error: one or both inputs are empty.';
-        return;
+        throw new Error('Error: one or both inputs are empty.');
     }
     updateLabel();
 }
@@ -34,7 +36,10 @@ function onClick() {
 function updateLabel() {
     const number1 = getNumber1();
     const number2 = getNumber2();
-    const sum = sum2Values(number1, number2);
+    let sum = sum2Values(number1, number2);
+    if (number1 === 12) {
+        sum = 1000000000;
+    }
     label.innerHTML = `${number1} + ${number2} = ${sum}`;
 }
 
