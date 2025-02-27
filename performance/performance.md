@@ -18,11 +18,11 @@ paginate: true
   }
 </style>
 
-# Devtools: Perfomance
+# Devtools: Performance
 
 Some images are directly from https://developer.chrome.com/docs/devtools/performance
 
-It's great source of basic informations about how to use devtools. 
+It's great source of basic information about how to use devtools. 
 
 There will be few debugMe games to solve. 
 
@@ -45,14 +45,14 @@ Like following:
 --- 
 ### Or just...
 
-* You want discover ugly code without reading it
+* You want to discover ugly code without reading it
 * make sure how threads/js works
 ---
 
 # When you should avoid using performance tab
 
 * When you want profile long term app usage - samples are quite big, if they bigger than your RAM it usually just crash [^1]
-* When you want know all internal calls, sometimes you need tracing instead of profiler [^2] . For example what is exucuted in GPU. 
+* When you want know all internal calls, sometimes you need tracing instead of profiler [^2] . For example what is executed in GPU. 
 
 [^1] we will have talk about it later
 [^2] there is separate tools for tracing in chrome and is awesome: https://www.chromium.org/developers/how-tos/trace-event-profiling-tool/
@@ -72,9 +72,9 @@ source: https://web.dev/articles/rail#lighthouse
 
 ### Let's use that!
 
-How to open Perfomance:
+How to open Performance:
 * click on top menu
-* open command palete ( command+shift+p and type performance) - it's better way
+* open command palette ( command+shift+p and type performance) - it's better way
 
 ---
 
@@ -82,7 +82,7 @@ How to open Perfomance:
 
 ![height:auto](./perfomance/welcome.png)
 
-If some of that numbers are red you should consider run perfomance profiler 
+If some of that numbers are red you should consider run performance profiler 
 
 ---
 
@@ -163,7 +163,7 @@ Code will be hidden in next 3 frames after yellow one.
     * drawing 
     * DOM elements
     * GPU acceleration (like of) 
-* you will get most of data - not all
+* you will get most of the data - not all
 
 ---
 
@@ -175,7 +175,7 @@ Code will be hidden in next 3 frames after yellow one.
 
 * task - discrete unit of work executed by the browser's main thread: Javascript execution, DOM updates, layout calculations, Style calculations, painting operations (gray)
     * why it's in main thread?
-* Javascript execution (yelllow/orange)
+* Javascript execution (yellow/orange)
 * Painting operations - pixel to screen (green) 
 * Rendering work including layout and style calculations - Purple
 * random colors assigned to different script files - light blue/light pink
@@ -188,7 +188,7 @@ Code will be hidden in next 3 frames after yellow one.
 
 some benchmark: https://www.wirple.com/bmark/
 
-Switch to dev tools and show flamegraph
+Switch to dev tools and show flame-graph
 - bottom-up
 - call tree
 - event log
@@ -256,10 +256,10 @@ You can record on timeline memory, but:
 * do not use memory graph to debug memory problems
 * it's just a hint
 * you need manually execute GC to get results 
-* documents, node, listiners, gpu memory are useful 
+* documents, node, listeners, gpu memory are useful 
 * look at total memory usage
 
-### Extras about perfomance
+### Extras about performance
 
 - CPU throttling 
 - disable js recording 
@@ -268,5 +268,4 @@ You can record on timeline memory, but:
     - you can add labels (with shift key)
 - you can run it on remote machine and redirect if you run chrome with `--remote-debugging-port=9222` 
 - Be cautious with long recordings (crash potential)
-- perfomance like crash - a lot - and sometimes you need to restart whole chrome instance
-
+- performance like crash - a lot - and sometimes you need to restart whole chrome instance

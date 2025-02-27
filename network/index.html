@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging - Network</title>
+</head>
+
+<body>
+<h1>Debugging - Network</h1>
+<section>
+    <h2>HTTP</h2>
+    <label for="http-call">Make a HTTP call</label>
+    <button id="http-call">Send Request</button>
+</section>
+<section>
+    <h2>WebSocket</h2>
+    <label for="ws-call-open">Open WebSocket connection</label>
+    <button id="ws-call-open">OPEN connection</button>
+    <br/>
+    <br/>
+    <label for="ws-call-close">Close WebSocket connection</label>
+    <button id="ws-call-close">CLOSE connection</button>
+    <br/>
+    <br/>
+    <label for="ws-msg">Send WebSocket message</label>
+    <input id="ws-msg" placeholder="WS Message"/>
+    <button id="ws-send-msg">SEND message</button>
+    <img style="margin-top: 20px; max-width: 100%" src="heavy-img.jpg" alt="heavy image"/>
+</section>
+<script type="module" src="./frontend.js"></script>
+</body>
+
+</html>
