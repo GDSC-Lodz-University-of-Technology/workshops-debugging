@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>elements</title>
+</head>
+
+<body>
+<h1>Demo: Elements</h1>
+<section>
+    <h2>Grid</h2>
+    <div class="grid-box">
+        <div class="grid-element grid-element-a">1</div>
+        <div class="grid-element grid-element-b">2</div>
+        <div class="grid-element grid-element-c">3</div>
+        <div class="grid-element grid-element-d">4</div>
+    </div>
+    <div class="grid">grid
+        <div class="subgrid">subgrid
+            <div class="subitem">subitem</div>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>FlexBox</h2>
+    <div class="flex-box">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+    </div>
+</section>
+<section>
+    <h2>ScrollSnap</h2>
+    <div class="scroll-box">
+        <div class="scroll-item">1</div>
+        <div class="scroll-item">2</div>
+        <div class="scroll-item">3</div>
+        <div class="scroll-item">4</div>
+        <div class="scroll-item">5</div>
+        <div class="scroll-item">6</div>
+        <div class="scroll-item">7</div>
+        <div class="scroll-item">8</div>
+        <div class="scroll-item">9</div>
+    </div>
+    <div class="scroll-text">Scroll ></div>
+</section>
+<section>
+    <h2>Container</h2>
+    <div class="container-box">
+        <div class="container-content">
+            <div class="visual"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a aliquet nisl.</p>
+            <a href="https://example.com">Lorem...</a>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Slot</h2>
+    <template id="my-template">
+        <p>
+            <slot name="my-slot">I'm a placeholder.</slot>
+        </p>
+    </template>
+    <my-template>
+        <span slot="my-slot">I'm the slot's content! Find my slot.</span>
+    </my-template>
+</section>
+<section>
+    <h2>Top layer</h2>
+    <dialog id="dialog">
+        <form method="dialog">
+            <p>Hi, I'm a dialog. I live in the top layer.</p>
+            <button>OK</button>
+        </form>
+    </dialog>
+
+    <button onclick="dialog.showModal()">Open dialog</button>
+</section>
+<script type="module" src="index.js"></script>
+</body>
+
+</html>

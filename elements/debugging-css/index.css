@@ -1,0 +1,39 @@
+section {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    padding: 60px 10px;
+    font-family: sans-serif;
+    border: 1px solid grey;
+    border-radius: 20px;
+}
+
+
+img {
+    max-width: 300px;
+}
+
+.card {
+    max-width: 800px;
+    font-size: 50px;
+}
+
+.card a, .thumbnail a {
+    color: unicornpink;
+    padding: 2px 14px;
+}
+
+.headline {
+    color: rebeccapurple;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px !important;
+}
+
+@media (max-width: 600px) {
+    .card {
+        /* Adjustments for smaller screens */
+        display: flex;
+        flex-direction: column;
+    }
+}
